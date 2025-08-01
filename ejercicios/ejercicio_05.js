@@ -1,11 +1,9 @@
-//Contar vocales en una cadena
-function contadorVocales() {
-  let contador = 0;
-  return function () {
-    return contador++;
-  };
+// Contar vocales en una cadena usando función recursiva
+function contarVocales(cadena) {
+  if (cadena.length === 0) return 0;
+  const vocales = "aeiouyAEIOUY";
+  const esVocal = vocales.includes(cadena[0]);
+  return (esVocal ? 1 : 0) + contarVocales(cadena.slice(1));
 }
 
-const contador1 = contadorVocales();
-console.log(contador1()); // 0
-console.log(contador1()); // 1
+console.log(contarVocales("Albany"));
