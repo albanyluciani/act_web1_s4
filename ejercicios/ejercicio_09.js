@@ -1,7 +1,7 @@
 // Crear un contador privado usando IIFE con closure
 
 function crearContador() {
-  let contador = 1;
+  let contador = 0;
   return function () {
     return contador++;
   };
