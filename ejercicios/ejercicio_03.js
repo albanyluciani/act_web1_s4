@@ -1,6 +1,14 @@
 // Sumar elementos de un arreglo usando función flecha
 
-const sumarArreglo = (numeros) =>
-  numeros.reduce((total, num) => total + num, 0);
+const sumarArreglo = (arreglo) => {
+  let suma = 0;
+  let i = 0;
 
-console.log(sumarArreglo([10, 40, 60, 90]));
+  while (i < arreglo.length) {
+    suma += arreglo[i];
+    i++;
+  }
+  return suma;
+};
+
+console.log(sumarArreglo([4, 8, 9, 6, 9]));
