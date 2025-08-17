@@ -1,7 +1,7 @@
 // Multiplicar elementos de un arreglo usando función de orden superior
 
-function multiplicarArreglo(arr) {
-  return arr.reduce(function (total, num) {
+function multiplicarArreglo(arreglo) {
+  return arreglo.reduce(function (total, num) {
     return total * num;
   }, 1);
 }
